@@ -1,6 +1,6 @@
 
 {
-    'name': 'Account Journal User Restrict',
+    'name': 'Payment Journal Confirmation User Restrict',
     'version': '6.0.0',
     'category': 'Accounting',
     "author": 'Zero Systems',
@@ -9,25 +9,15 @@
     "email": "sales@erpzero.com",
     "sequence": 0,
     'license': 'OPL-1',
-    'live_test_url': 'https://www.youtube.com/playlist?list=PLXFpENL3b6WU9TzMdawrHJsUBqMDXkcbn',
-    'summary': """Account Journal User Restrict confirm""",
+    'live_test_url': 'https://youtu.be/j6LDUhpYemI',
+    'summary': """Payments Internal Transfers Confirmation User Restrict""",
     'description': """
-        In the standard odoo, 
-        any user with accountant group policy can confirm cash and bank movements,
-        whether send, receipt, or internal transfer between bank and cash journals,
-        but with this module, the user associated with the cash or 
-        bank journal can only confirm the bank and cash movement (exchange - receipt) if this book Among his powers,
-        but if the movement is a bank and cash transfer between the bank and cash journals, then the user has the right only to send money
-        from the book allowed to him and confirm the receipt of money for the authorized user,
-        the bank and cash book receiving the money, and if the user has rights on the two journals (the sending book and the receiving book) 
-        then he can make the bank and cash transfer Between the two journals and the appropriation for the bank and cash movement as well,
-        as he has rights over the two journals together.
-        """,
+        Confirmation of the Payments Internal Transfers is the right of the user who has rights on the Paymant Journal transferred to him only        """,
     'depends': ['base','account'],
     'data': [
         'views/view.xml',
     ],
-    'images': ['static/description/logo.PNG'],
+    'images': ['static/description/payment_transfers.png'],
     'installable': True,
     'auto_install': False,
     'application': False,
