@@ -50,18 +50,18 @@ class AccountPayment(models.Model):
     # state = fields.Selection(selection_add=[('first_confirm', 'Send to Confirm')], ondelete={'draft': 'set default'})
 
 
-    @api.depends('state','payment_type','is_internal_transfer','journal_id','destination_journal_id')
+    @api.depends('is_internal_transfer','journal_id','destination_journal_id')
     def _allowed_users(self):
         for record in self:
             user = self.env.user
             record.receive_payment_invisable = False
-            if record.is_internal_transfer:
-                if record.destination_journal_id and record.destination_journal_id.user_ids:
-                    record.allowed_users = record.destination_journal_id.user_ids
-                    if record.allowed_users and (user not in record.destination_journal_id.user_ids):
-                        record.receive_payment_invisable = True
-                    else:
-                        record.allowed_users = False
+            record.allowed_users = False
+            if record.is_internal_transfer and (record.destination_journal_id and record.destination_journal_id.user_ids):
+                record.allowed_users = record.destination_journal_id.user_ids
+                if record.allowed_users and (user not in record.destination_journal_id.user_ids):
+                    record.receive_payment_invisable = True
+                else:
+                    record.allowed_users = False
 
             else:
                 if record.journal_id and record.journal_id.user_ids:
