@@ -24,10 +24,10 @@
                     <field name="receive_payment_invisable" invisible="1"/>
                   </xpath>
                   <xpath expr="//button[@name='action_draft']" position="attributes">
-                    <attribute name="attrs">{'invisible': ['|',('receive_payment_invisable', '=', True),('state', 'not in', ('posted', 'cancel'))]}</attribute>
+                    <attribute name="invisible">[receive_payment_invisable ==True  or state not in('posted', 'cancel')]</attribute>
                   </xpath>
                   <xpath expr="//button[@name='action_post']" position="attributes">
-                    <attribute name="attrs">{'invisible': ['|',('receive_payment_invisable', '=', True),('state', '!=', 'draft')]}</attribute>
+                    <attribute name="invisible">[receive_payment_invisable ==True or state not in ('draft')]</attribute>
                   </xpath>
             </field>
         </record>
