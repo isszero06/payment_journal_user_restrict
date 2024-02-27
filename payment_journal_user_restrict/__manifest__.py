@@ -1,7 +1,7 @@
 
 {
     'name': 'Payment Journal Confirmation User Restrict',
-    'version': '6.0.1',
+    'version': '7.0.1',
     'category': 'Accounting',
     "author": 'Zero Systems',
     "company": 'Zero for Information Systems',
