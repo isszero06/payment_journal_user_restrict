@@ -12,7 +12,7 @@
     'live_test_url': 'https://youtu.be/j6LDUhpYemI',
     'summary': """Payments Internal Transfers Confirmation User Restrict""",
     'description': """
-        Confirmation of the Payments Internal Transfers is the right of the user who has rights on the Paymant Journal transferred to him only        """,
+        Confirmation of the Payments Internal Transfers is the right of the user who has rights on the Paymant Journal transferred to him only """,
     'depends': ['base','account'],
     'data': [
         'views/view.xml',
@@ -21,7 +21,7 @@
     'installable': True,
     'auto_install': False,
     'application': False,
-    'pre_init_check_vers': 'pre_init_check_vers',
+    'pre_init_check': 'pre_init_check',
     "price": 25.0,
     "currency": 'EUR',
 }
