@@ -68,6 +68,7 @@
             </field>
          </record>
 
+
         <record id="account_payment_form_allwed_users" model="ir.ui.view">
             <field name="name">account.payment.form.allwed.users</field>
             <field name="model">account.payment</field>
