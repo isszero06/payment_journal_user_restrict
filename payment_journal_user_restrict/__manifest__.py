@@ -1,7 +1,7 @@
 
 {
     'name': 'Payment Journal Confirmation User Restrict',
-    'version': '6.0.0',
+    'version': '6.0.1',
     'category': 'Accounting',
     "author": 'Zero Systems',
     "company": 'Zero for Information Systems',
@@ -22,6 +22,6 @@
     'auto_install': False,
     'application': False,
     'pre_init_check_vers': 'pre_init_check_vers',
-    "price": 50.0,
+    "price": 25.0,
     "currency": 'EUR',
 }
